@@ -1,5 +1,6 @@
 name: 'PR analizer action'
 description: 'Analize the changes in a pull request and post a summary in a comment.'
+
 inputs:
   github_token:
     description: 'The GitHub Token to authenticate with the API.'
@@ -17,6 +18,7 @@ inputs:
     description: 'Enable verbose logging.'
     required: false
     default: 'false'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,3 +27,7 @@ runs:
     CONFIG_PATH: ${{ inputs.config_path }}
     IGNORE_NOT_DEFINED_LANGUAGE: ${{ inputs.ignore_not_defined_language }}
     VERBOSE_LOGGING: ${{ inputs.verbose_logging }}
+
+branding:
+  icon: 'activity'
+  color: 'green'
