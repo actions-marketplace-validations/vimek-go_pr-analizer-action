@@ -1,0 +1,27 @@
+name: 'PR analizer action'
+description: 'Analize the changes in a pull request and post a summary in a comment.'
+inputs:
+  github_token:
+    description: 'The GitHub Token to authenticate with the API.'
+    required: true
+    default: ${{ github.token }}
+  config_path:
+    description: 'Path to the configuration file.'
+    required: false
+    default: 'analizer_config.yaml'
+  ignore_not_defined_language:
+    description: 'Ignore files if language is not defined in the config. Defaults to true.'
+    required: false
+    default: 'true'
+  verbose_logging:
+    description: 'Enable verbose logging.'
+    required: false
+    default: 'false'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    GITHUB_TOKEN: ${{ inputs.github_token }}
+    CONFIG_PATH: ${{ inputs.config_path }}
+    IGNORE_NOT_DEFINED_LANGUAGE: ${{ inputs.ignore_not_defined_language }}
+    VERBOSE_LOGGING: ${{ inputs.verbose_logging }}

@@ -1,0 +1,114 @@
+global_ignore:
+  - ".git"
+  - ".idea"
+  - ".vscode"
+  - "node_modules/**"
+  - "vendor/**"
+  - "target/**" # For Rust
+  - "build/**"
+  - "dist/**"
+  - ".next" # For Next.js
+
+languages:
+  - name: "Go"
+    extensions:
+      - ".go"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*_test.go"
+
+  - name: "Python"
+    extensions:
+      - ".py"
+    line_comment: "#"
+    multi_line_comment_start: '"""'
+    multi_line_comment_end: '"""'
+    test_pattern: "test_*.py"
+
+  - name: "JavaScript"
+    extensions:
+      - ".js"
+      - ".jsx"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*.test.js"
+
+  - name: "TypeScript"
+    extensions:
+      - ".ts"
+      - ".tsx"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*.test.ts"
+
+  - name: "Java"
+    extensions:
+      - ".java"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*Test.java"
+
+  - name: "C#"
+    extensions:
+      - ".cs"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*Tests.cs"
+
+  - name: "C++"
+    extensions:
+      - ".cpp"
+      - ".hpp"
+      - ".cxx"
+      - ".hxx"
+      - ".h"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*test.cpp"
+
+  - name: "Ruby"
+    extensions:
+      - ".rb"
+    line_comment: "#"
+    multi_line_comment_start: "=begin"
+    multi_line_comment_end: "=end"
+    test_pattern: "*_test.rb"
+
+  - name: "PHP"
+    extensions:
+      - ".php"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*Test.php"
+
+  - name: "Rust"
+    extensions:
+      - ".rs"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*_test.rs"
+
+  - name: "Kotlin"
+    extensions:
+      - ".kt"
+      - ".kts"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*Test.kt"
+
+  - name: "Swift"
+    extensions:
+      - ".swift"
+    line_comment: "//"
+    multi_line_comment_start: "/*"
+    multi_line_comment_end: "*/"
+    test_pattern: "*Tests.swift"
